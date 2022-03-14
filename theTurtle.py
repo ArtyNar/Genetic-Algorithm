@@ -1,0 +1,35 @@
+from turtle import *
+import turtle
+  
+speed(0)
+  
+right(-90)
+  
+angle = 30
+  
+def yaxis(size, lvl):   
+  
+    if lvl > 0:
+        colormode(255)
+          
+        pencolor(0, 255//lvl, 0)
+          
+        forward(size)
+  
+        right(angle)
+ 
+        yaxis(0.8 * size, lvl-1)
+          
+        pencolor(0, 255//lvl, 0)
+          
+        lt( 2 * angle )
+  
+        yaxis(0.8 * size, lvl-1)
+          
+        pencolor(0, 255//lvl, 0)
+          
+        right(angle)
+        forward(-size)
+           
+yaxis(80, 5)
+turtle.done()
